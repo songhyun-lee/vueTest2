@@ -2,6 +2,13 @@
 <html lang="en">
 <head>
   <title>Document</title>
+  <style>
+    .projectPreview{
+      width: 100px;
+      height: 100px;
+      display: block;
+    }
+  </style>
 </head>
 <body>
 
@@ -21,8 +28,9 @@
 
   <div class="app4">
     <ol>
-      <li v-for="todo in todos">
-        {{ todo.text }}
+      <span class="projectPreview" v-for="i in images"></span>
+      <li v-for="i in todos">
+        {{ i.text }}
       </li>
     </ol>
   </div>
