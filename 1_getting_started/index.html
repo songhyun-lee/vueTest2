@@ -4,6 +4,40 @@
   <title>Document</title>
 </head>
 <body>
-  
+
+  <div class="app">
+    {{ message }}
+  </div>
+
+  <div class="app2">
+    <span v-bind:title="message">
+      마우스를 올리면 동적으로 바인딩 된 title을 볼 수 있습니다.
+    </span>
+  </div>
+
+  <div class="app3">
+    <p v-if="seen">이제 볼 수 있어요</p>
+  </div>
+
+  <div class="app4">
+    <ol>
+      <li v-for="todo in todos">
+        {{ todo.text }}
+      </li>
+    </ol>
+  </div>
+
+  <div class="app5">
+    <p>{{ message }}</p>
+    <button v-on:click="reverseMessage">메세지 뒤집기</button>
+  </div>
+
+  <div class="app6">
+    <p>{{message}}</p>
+    <input type="text" v-model="message">
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
